@@ -1,10 +1,12 @@
 #include<stdio.h>
 
 int main(){
-    int n;
-    scanf("%d", &n);
-    printf("%02d", n);
-
-    return 0;
+    char n[30];
+    scanf("%s", n);
+    for(int i=0; n[i] != '\0'; i++){
+        printf("\'%c\'\n", n[i]);
+    }
 
 }
+
+
