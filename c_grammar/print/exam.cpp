@@ -34,12 +34,14 @@
 
 #include<stdio.h>
 
-int main(){
-   char a;
-    scanf("%c", &a);
-    printf("%c", a+1);
-
-
+int main(void){
+    int a; int b;
+    scanf("%d", &a);
+    reload:
+    scanf("%d", &b);
+    printf("%d\n", b);
+    if(--a !=0) goto reload;
+    else return;
     return 0;
 
 }
