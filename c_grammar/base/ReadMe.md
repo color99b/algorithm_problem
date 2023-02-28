@@ -25,3 +25,8 @@
 
 - [이름]: 로 되어있다. swich() ~ case: 에서 case: 도 lable이라고 볼 수 있다.
 - goto [이름] 을 통해 해당 위치의 lable로 강제 이동이 가능하지만 직관적이지 못할경우 이해가 어려워진다.
+
+## char 와 char\*
+
+- char a= ~~ 로 설정을 하고 싶을때 한 글자만 저장을 하면 char a= 'a' ('', single)
+- char a = "asd" 처럼 문자열로 저장을 하면 ("", double) -> char \* 로 문자열 포인터개념

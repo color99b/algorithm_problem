@@ -35,18 +35,16 @@
 #include<stdio.h>
 
 int main(void){
-    int a; int b;
-    scanf("%d", &a);
-    reload:
-    scanf("%d", &b);
-    printf("%d\n", b);
-    if(--a !=0) goto reload;
-    else return;
+   int a; int b=0;
+   scanf("%d", &a);
+   for(int i=0; i<=a; i++){
+       printf("%d ", b++ );
+   }
+    
+
     return 0;
 
 }
-
-
 // #include<stdio.h>
 
 // int main(){
