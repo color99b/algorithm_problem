@@ -34,23 +34,45 @@
 
 #include<stdio.h>
 
-int main(void){
-   int a; int b=0;
-   scanf("%d", &a);
-   for(int i=0; i<=a; i++){
-       printf("%d ", b++ );
-   }
-    
+int main(){
+    int a; int b; int c; 
+    scanf("%d %d %d", &a, &b, &c);
+    int i=1;
+    while(1){
+       if (i%a==0 && i%b==0 && i%c==0) {return printf("%d", i);}else i++;
+        
+    }
 
-    return 0;
+        return 0;
+    }
 
-}
+// #include<stdio.h>
+
+// int main(){
+//     int a; int b; int c; int count=0;
+//     scanf("%d %d %d", &a, &b, &c);
+//     for(int i=0; i<a; i++){
+//       for (int j=0; j<b; j++){
+//         for (int k=0; k<c; k++){
+//             printf("%d %d %d\n", i,j,k);
+//             count++;
+//         }
+//       }
+//     }
+
+//     printf("%d", count);
+//     return 0;
+
+// }
+
+
+
 // #include<stdio.h>
 
 // int main(){
 //    long long int a; long long int b;
 //     scanf("%lld %lld", &a,&b);
-//     printf("%lld", a+b);
+    // printf("%lld", a+b);
 
 
 //     return 0;
