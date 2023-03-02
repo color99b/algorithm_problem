@@ -35,12 +35,17 @@
 #include<stdio.h>
 
 int main(){
-    int a; int b; int c; 
-    scanf("%d %d %d", &a, &b, &c);
-    int i=1;
-    while(1){
-       if (i%a==0 && i%b==0 && i%c==0) {return printf("%d", i);}else i++;
+    int max;
+    scanf("%d", &max);
+    int temp[24]={};
+    for(int i=0; i<max; i++){
+        int one;
+        scanf("%d",&one);
+        temp[one]++;
         
+    }
+    for(int j=1; j<=23; j++){
+        printf("%d ", temp[j]);
     }
 
         return 0;
