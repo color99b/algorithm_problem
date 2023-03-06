@@ -33,20 +33,33 @@
 // }
 
 #include<stdio.h>
+    int arr[100][100];
+    
 
 int main(){
-    int max;
-    scanf("%d", &max);
-    int temp[24]={};
-    for(int i=0; i<max; i++){
-        int one;
-        scanf("%d",&one);
-        temp[one]++;
-        
+    int x; int y; int num;
+    scanf("%d %d", &x, &y);
+    scanf("%d", &num);
+    for(int i=1; i<=num; i++){
+        int length; int col; int xlen; int ylen;
+        scanf("%d %d %d %d", &length, &col, &xlen, &ylen);
+  
+            for(int j=0; j<length; j++){
+        if(col ==0){
+          arr[xlen-1][ylen-1+j]=1;
+        }else{
+            arr[xlen-1+j][ylen-1]=1;
+        }
+            }
+      
     }
-    for(int j=1; j<=23; j++){
-        printf("%d ", temp[j]);
+    for(int r=0; r<x; r++){
+        for(int t=0; t<y; t++){
+            printf("%d ", arr[r][t]);
+        }
+        printf("\n");
     }
+    
 
         return 0;
     }
@@ -83,3 +96,4 @@ int main(){
 //     return 0;
 
 // }
+
