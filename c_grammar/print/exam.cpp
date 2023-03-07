@@ -33,32 +33,36 @@
 // }
 
 #include<stdio.h>
-    int arr[100][100];
+    int arr[10][10];
     
 
 int main(){
-    int x; int y; int num;
-    scanf("%d %d", &x, &y);
-    scanf("%d", &num);
-    for(int i=1; i<=num; i++){
-        int length; int col; int xlen; int ylen;
-        scanf("%d %d %d %d", &length, &col, &xlen, &ylen);
-  
-            for(int j=0; j<length; j++){
-        if(col ==0){
-          arr[xlen-1][ylen-1+j]=1;
-        }else{
-            arr[xlen-1+j][ylen-1]=1;
+
+    
+    for(int i=0; i<10; i++){
+        for (int j=0; j<10; j++){
+            scanf("%d", &arr[i][j]);
         }
-            }
-      
+    
     }
-    for(int r=0; r<x; r++){
-        for(int t=0; t<y; t++){
-            printf("%d ", arr[r][t]);
+    arr[1][1] = 9;
+    do{
+        for(int e=1; e<9; e++){
+            for(int r=1; r<9; r++){
+                if(arr[e][r+1]==1 && arr[e+1][r]==1) break;
+                else if (arr[e][r+1]==1) arr[e+1][r]=9;
+                else if (arr[e+1][r]==1) arr[e][r+1]=9; 
+            }
+        }
+    }while(true);
+    for (int q=0; q<10; q++){
+        for(int w=0; w<10; w++){
+            
+            printf("%d ", arr[q][w]);
         }
         printf("\n");
     }
+
     
 
         return 0;
