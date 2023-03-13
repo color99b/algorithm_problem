@@ -94,21 +94,16 @@
 
 
 #include<stdio.h>
-
 int main(){
-   int a;
-    scanf("%d", & a);
+    int n;
+    scanf("%d", &n);
+    int five=5; int three=3; int count=0;
+    count += n/five;
+    n %= five;
+    count += n/three;
+    n %= three;
 
-    int arr[10000]={};
-    for(int i=0; i<a; i++){
-  scanf("%d",&arr[i]);
-    }
-  
-
-
-
-
+    
     return 0;
-
 }
 
